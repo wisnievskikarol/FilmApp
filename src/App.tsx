@@ -1,30 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
-// import "dotenv/config";
+import Home from "./views/Home";
+import Navigation from "./components/Navigation";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const { REACT_APP_TEST_KEY } = process.env;
-
-  console.log("Kurwa", REACT_APP_TEST_KEY);
-  console.log("Kurwa2", process.env.REACT_APP_TEST_KEY);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/*<Route path="expenses" element={<Expenses />} />*/}
+        {/*<Route path="invoices" element={<Invoices />} />*/}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
