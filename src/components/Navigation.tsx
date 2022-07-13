@@ -14,11 +14,15 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Logo from "../assets/Logo.png";
+import HamburgerMenu from "../assets/hamburger-menu.png";
+import { useState } from "react";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navigation = () => {
+  const [menuToggle, setMenuToggle] = useState(false);
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -42,21 +46,13 @@ const Navigation = () => {
   };
 
   return (
-    <div>
-      <nav id="navbar">
-        <ul className="menu">
-          <li id="logo" title="Made by Johnny Stiwerson">
-            <img src={Logo} />
-          </li>
-          <li id="trigram" title="CLICK ME!&#10I WORK WITHOUT JS :)">
-            <div className="hamburger-menu">
-              <div className="bar-top"></div>
-              <div className="bar-middle"></div>
-              <div className="bar-bottom"></div>
-            </div>
-          </li>
-          <span id="responsive-menu">
-            <ul className="menu">
+    <nav className="navbar">
+      <Container maxWidth="xl">
+        <div className="menu-container-lg">
+          <div className="menu-left-container">
+            <img className="logo" src={Logo} alt={"logo"} />
+
+            <ul className="menu-left">
               <li className="menu-option">
                 <p>Home</p>
               </li>
@@ -66,17 +62,48 @@ const Navigation = () => {
               <li className="menu-option">
                 <p>About us</p>
               </li>
+            </ul>
+          </div>
+          <div className="menu-right-container">
+            <ul>
               <li id="sign-in">
-                <p>Sign in</p>
+                <p>Log in</p>
               </li>
               <li id="sign-up">
-                <p>Sign up</p>
+                <p>Register</p>
               </li>
             </ul>
-          </span>
-        </ul>
-      </nav>
-    </div>
+          </div>
+        </div>
+        <div className="menu-container-sm">
+          <img className="logo" src={Logo} alt={"logo"} />
+          <img
+            className="hamburger-menu"
+            src={HamburgerMenu}
+            alt={"menu button"}
+          />
+        </div>
+        <div className="toggle-menu ">
+          <ul>
+            <li>
+              <p>Popular</p>
+            </li>
+            <li>
+              <p>Whats New!</p>
+            </li>
+            <li>
+              <p>Films</p>
+            </li>
+            <li>
+              <p>Log in</p>
+            </li>
+            <li>
+              <p>Register</p>
+            </li>
+          </ul>
+        </div>
+      </Container>
+    </nav>
   );
 };
 export default Navigation;
