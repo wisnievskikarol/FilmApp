@@ -12,7 +12,7 @@ const Hero = (props: propsType) => {
     <Container maxWidth="xl">
       <Grid container spacing={0}>
         <Grid item xs={6}>
-          <h1>Siemanko</h1>
+          <h1></h1>
         </Grid>
         <Grid item xs={6}>
           <img style={{ width: "100%" }} src={Poster} />

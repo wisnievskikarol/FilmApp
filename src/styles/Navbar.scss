@@ -10,6 +10,7 @@
 }
 .hamburger-menu {
   display: unset;
+  cursor: pointer;
 }
 .menu-container-lg {
   display: flex;
@@ -77,6 +78,7 @@
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+    left: 0;
     ul {
       text-align: center;
       line-height: 5rem;
@@ -92,4 +94,7 @@
   .menu-container-lg {
     display: none;
   }
+}
+.display-none {
+  display: none;
 }

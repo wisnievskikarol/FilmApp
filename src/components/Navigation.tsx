@@ -81,9 +81,10 @@ const Navigation = () => {
             className="hamburger-menu"
             src={HamburgerMenu}
             alt={"menu button"}
+            onClick={() => setMenuToggle(!menuToggle)}
           />
         </div>
-        <div className="toggle-menu ">
+        <div className={`toggle-menu ${menuToggle && "display-none"} `}>
           <ul>
             <li>
               <p>Popular</p>
