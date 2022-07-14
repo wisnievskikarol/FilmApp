@@ -1,0 +1,44 @@
+.hero {
+  height: 100vh;
+  background-color: red;
+
+  .video-player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .left-hero-section {
+    height: 100vh;
+    z-index: 2;
+  }
+  .left-hero-section-cnt {
+    display: flex;
+    justify-content: center;
+    //background-color: red;
+    flex-direction: column;
+    height: 100%;
+    //z-index: 5;
+    h1 {
+      font-weight: 700;
+      font-size: 7rem;
+      line-height: 1rem;
+    }
+  }
+  .hero-whats-new-line {
+    width: 56.1px;
+    height: 0px;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+  }
+  .hero-whats-new-cnt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 22.98px;
+    p {
+      font-weight: 400;
+    }
+  }
+}

@@ -15,6 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Logo from "../assets/Logo.png";
 import HamburgerMenu from "../assets/hamburger-menu.png";
+import CloseMenu from "../assets/close-menu.png";
 import { useState } from "react";
 
 const pages = ["Products", "Pricing", "Blog"];
@@ -77,12 +78,21 @@ const Navigation = () => {
         </div>
         <div className="menu-container-sm">
           <img className="logo" src={Logo} alt={"logo"} />
-          <img
-            className="hamburger-menu"
-            src={HamburgerMenu}
-            alt={"menu button"}
-            onClick={() => setMenuToggle(!menuToggle)}
-          />
+          {menuToggle ? (
+            <img
+              className="hamburger-menu"
+              src={HamburgerMenu}
+              alt={"menu button"}
+              onClick={() => setMenuToggle(!menuToggle)}
+            />
+          ) : (
+            <img
+              className="hamburger-menu"
+              src={CloseMenu}
+              alt={"menu button"}
+              onClick={() => setMenuToggle(!menuToggle)}
+            />
+          )}
         </div>
         <div className={`toggle-menu ${menuToggle && "display-none"} `}>
           <ul>
