@@ -37,19 +37,23 @@ const Hero = (props: propsType) => {
             <Grid className="left-hero-section" item xs={6}>
               <div className="left-hero-section-cnt">
                 <div className="hero-whats-new-cnt">
-                  <div className="hero-whats-new-line"></div>
+                  <div className="hero-whats-new-line" />
                   <p>What’s new</p>
                 </div>
                 <h1>sad</h1>
-                <div hero-description-section>
+                <div className="hero-description">
                   <p>
                     A former soldier of special forces is subjected to a
                     dangerous experiment. Soon he releases his alter ego and
                     begins the hunt for the man who nearly destroyed his life.
                   </p>
-                  <div>
+                  <div className="hero-read-more">
                     <p>Read more</p>
                     <img src={RightArrow} />
+                  </div>
+                  <div className="hero-play-now">
+                    <img src={RedPlayButton} />
+                    <p>PLAY NOW</p>
                   </div>
                 </div>
               </div>
@@ -60,7 +64,7 @@ const Hero = (props: propsType) => {
           </Grid>
         </Container>
         {/*<img style={{ width: "100%" }} src={Poster} />*/}
-        <YouTube className="video-player" videoId="2g811Eo7K8U" opts={opts} />
+        <YouTube className="video-player" videoId="PCQs3vSJ6xA" opts={opts} />
       </div>
     </>
   );

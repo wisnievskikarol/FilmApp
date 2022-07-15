@@ -1,0 +1,65 @@
+.poster-cnt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  max-width: 350px;
+}
+
+.poster-information-cnt {
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  //display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-duration: 3.2s;
+  animation-name: example;
+  align-items: flex-end;
+  .poster-information {
+    margin-bottom: 2rem;
+    .movie-cover-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .movie-cover-rating-cnt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 20px;
+      }
+      p {
+        line-height: 2.5rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  display: none;
+}
+
+@keyframes example {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 212, 255, 0) 100%
+    );
+  }
+}
+//.poster-information-cnt:hover {
+//  display: flex;
+//}
+
+.display-flex {
+  display: flex;
+}

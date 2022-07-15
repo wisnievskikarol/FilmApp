@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  background-color: red;
+  text-shadow: 2px 2px rgb(0, 0, 0);
 
   .video-player {
     position: absolute;
@@ -15,14 +15,35 @@
   .left-hero-section-cnt {
     display: flex;
     justify-content: center;
-    //background-color: red;
     flex-direction: column;
     height: 100%;
-    //z-index: 5;
     h1 {
       font-weight: 700;
       font-size: 7rem;
       line-height: 1rem;
+    }
+    .hero-description {
+      display: flex;
+      flex-direction: column;
+      .hero-read-more {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+      }
+      p {
+        line-height: 1.5;
+      }
+      .hero-play-now {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        img {
+          width: 4.5rem;
+          cursor: pointer;
+        }
+      }
     }
   }
   .hero-whats-new-line {

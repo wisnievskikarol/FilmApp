@@ -1,22 +1,10 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 // import Button from "@mui/material/Button";
-import Button from "../components/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import Logo from "../assets/Logo.png";
 import HamburgerMenu from "../assets/hamburger-menu.png";
 import CloseMenu from "../assets/close-menu.png";
-import { useState } from "react";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
